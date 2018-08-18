@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My blogs</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+
+<!-- navigasi -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="nav_top_fx_w3ls_agileinfo">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					    aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<div class="logo-w3layouts-agileits">
+						<h1> <a class="navbar-brand" href="index.html">BLOG <span class="desc">my blog</span></a></h1>
+					</div>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<div class="nav_right_top">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="request" href="login.html">Login</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="berita.html">Artikel</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">kategori<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="portfolio.html">Web</a></li>
+									<li><a href="404.html">Android</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">Tentang</a></li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+		</nav>
+	<!-- akhir navigasi-->
+
+
+
+	<!-- form -->
+	<!-- /inner_content -->
+	<div class="register">
+		<div class="container">
+			<div class="row">
+        		<div class="col-sm-8 col-sm-offset-2 ">
+  
+		            <form action="" method="post" role="form" id="fileForm">
+
+		            <div class="text-center">
+						<h3>Form Pendaftaran</h3>
+						<hr>
+					</div>
+				
+					<div class="form-group">    
+		                    <label for="instansi"><span class="req">* </span> Nama : </label>
+		                    <input class="form-control" type="text" name="instansi" required /> 
+		                    <div id="errFirst"></div>    
+		            </div>          
+
+		            <div class="form-group">
+		                    <label for="phonenumber"><span class="req">* </span> Nomor Telepon: </label>
+		                    <input required type="text" name="telp" id="phone" class="form-control phone" maxlength="12" onkeyup="validatephone(this);" > 
+		            </div>
+
+		            <div class="form-group">
+		                    <label for="email"><span class="req">* </span> Email : <small> (Digunakan untuk Login) </small></label> 
+		                     <input type="email" name="email" id="email" class="form-control" onchange="email_validate(this.value);"/>  
+		                     <span id="email_result"></span> 
+		            </div>
+	           
+		            <div class="form-group">
+		                <label for="password"><span class="req">* </span> Password: </label>
+		                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="30"  id="pass1" /> </p>
+
+		                <label for="password"><span class="req">* </span> Password Confirm: </label>
+		                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="30" placeholder="Konfirmasi password"  id="pass2" onkeyup="checkPass(); return false;" />
+		                        <span id="confirmMessage" class="confirmMessage"></span>
+		            </div>
+	            
+
+		            <div class="form-group">
+		            
+		                <input type="hidden" value="" name="dateregistered">
+		                <input type="hidden" value="0" name="activate" />
+
+		                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">Saya Menyetujui <a href="terms.php" title="You may read our terms and conditions by clicking on this link">Kebijakan dan Privasi</a> Untuk Pendaftaran.</label><span class="req">* </span>
+		            </div>
+
+		            <div class="form-group">
+		                <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+		            </div>
+	                      <h5>Anda akan mendapatkan email untuk menyelesaikan pendaftaran ini dan menvalidasinya. </h5>	 
+
+	            </form>
+      
+        	</div>
+		  </div>
+		</div>
+	</div>
+	<!-- akhir form -->
+	
+
+  
+    <!-- footer -->
+      <footer>
+      	<div class="container text-center">
+      		<div class="row">
+      			<div class="col-sm-12">
+      				<p>&copy; 2018 | Build by <a href=""> Satriyo Pujo Nur Rahino </a></p>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+    <!-- akhir footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    function checkPass()
+      {
+          //Store the password field objects into variables ...
+          var pass1 = document.getElementById('pass1');
+          var pass2 = document.getElementById('pass2');
+          //Store the Confimation Message Object ...
+          var message = document.getElementById('confirmMessage');
+          //Set the colors we will be using ...
+          var goodColor = "#66cc66";
+          var badColor = "#ff6666";
+          //Compare the values in the password field 
+          //and the confirmation field
+          if(pass1.value == pass2.value){
+              //The passwords match. 
+              //Set the color to the good color and inform
+              //the user that they have entered the correct password 
+              pass2.style.backgroundColor = goodColor;
+              message.style.color = goodColor;
+              message.innerHTML = "Password benar"
+          }else{
+              //The passwords do not match.
+              //Set the color to the bad color and
+              //notify the user.
+              pass2.style.backgroundColor = badColor;
+              message.style.color = badColor;
+              message.innerHTML = "Password tidak sama!"
+          }
+      } 
+
+    function validatephone(phone) 
+    {
+        var maintainplus = '';
+        var numval = phone.value
+        if ( numval.charAt(0)=='+' )
+        {
+            var maintainplus = '';
+        }
+        curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+        phone.value = maintainplus + curphonevar;
+        var maintainplus = '';
+        phone.focus;
+    }
+    // validates text only
+    function Validate(txt) {
+        txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+    }
+    // validate email
+    function email_validate(email)
+    {
+    var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+        if(regMail.test(email) == false)
+        {
+        document.getElementById("status").innerHTML    = "<span class='warning'>Alamat Email Tidak Valid</span>";
+        }
+        else
+        {
+        document.getElementById("status").innerHTML = "<span class='valid'>Alamat Email Valid</span>";  
+        }
+    }
+
+  </script>
+
+  <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById("pass1").onchange = validatePassword;
+                document.getElementById("pass2").onchange = validatePassword;
+            }
+            function validatePassword(){
+                var pass2=document.getElementById("pass2").value;
+                var pass1=document.getElementById("pass1").value;
+                if(pass1!=pass2)
+                    document.getElementById("pass2").setCustomValidity("Password Tidak Sama, Coba Lagi");
+                else
+                    document.getElementById("pass2").setCustomValidity('');
+            }
+        </script>
+  </body>
+</html>
